@@ -5,7 +5,7 @@ RUN apt-get install -y curl && \
 
 WORKDIR /root/buld-dir/
 
-RUN apt-get update && apt-get install nodejs && \
+RUN apt-get update && apt-get install -y nodejs && \
   npm install -g gulp bower grunt 
   
 CMD npm install && \
