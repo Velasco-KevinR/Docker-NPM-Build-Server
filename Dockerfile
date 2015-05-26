@@ -10,7 +10,4 @@ RUN curl -sL https://deb.nodesource.com/setup | sudo bash - && \
   
 RUN npm install -g gulp bower grunt 
   
-CMD npm install && \
-  bower --allow-root install && \
-  gulp build
-
+CMD sh -c "bower --allow-root install; npm install; gulp build; gulp wiredep"
